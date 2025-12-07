@@ -1,0 +1,36 @@
+EXECUTIVE SUMMARY - CSAT ANALYSIS
+==================================================
+
+ISSUE_PRIORITY_FRAMEWORK:
+------------------------------
+✅ Issue priority framework saved to: results\business_analysis\issue_priority_framework.png
+🎯 CUSTOMER ISSUE PRIORITY FRAMEWORK
+======================================================================
+🔴 HIGH PRIORITY - IMMEDIATE ACTION (This Week):
+   Promotional Offer Clarity
+   • Priority Score: 169
+   • Frequency: 52 mentions
+
+
+KEY RECOMMENDATIONS:
+------------------------------
+1. 🔴 IMMEDIATE (This Week):
+   • Fix internet connection reliability issues
+   • Improve technical support response times
+   • Review Série Spéciale Pop S success factors
+
+2. 🟡 QUARTERLY (Next 90 Days):
+   • Address billing transparency concerns
+   • Simplify installation processes
+   • Improve Box 5G customer satisfaction
+
+3. 🟢 ONGOING:
+   • Monitor CSAT trends monthly
+   • Track NPS-Complaint correlation
+   • Share best practices across offers
+
+4. 📊 METRICS TO WATCH:
+   • CSAT scores by offer type (weekly)
+   • NPS segmentation (monthly)
+   • Complaint resolution rate (daily)
+   • Customer retention by offer (quarterly)
