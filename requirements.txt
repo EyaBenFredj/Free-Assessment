@@ -1,0 +1,39 @@
+# Core data & scientific stack
+pandas>=1.3
+numpy>=1.21
+scipy>=1.7
+matplotlib>=3.4
+seaborn>=0.11
+scikit-learn>=1.0
+joblib>=1.1
+tqdm>=4.60
+python-dateutil>=2.8
+PyYAML>=5.4
+
+# NLP & embeddings
+sentence-transformers>=2.2.2
+transformers>=4.12.0
+torch>=1.9.0
+
+# Dimensionality reduction & clustering
+umap-learn>=0.5.3
+hdbscan>=0.8.29
+
+# Topic modeling / NLP utilities
+nltk>=3.6
+spacy>=3.1
+gensim>=4.1
+bertopic>=0.12.0
+
+# Visualization / dashboards
+plotly>=5.0
+streamlit>=1.0
+
+# Optimization / Bayesian tools
+optuna>=3.0
+scikit-optimize>=0.9.0
+
+# Causal inference (optional / advanced)
+dowhy>=0.8
+
+# Misc (I/O, DB)
