@@ -1,0 +1,31 @@
+KNOWLEDGE GRAPH SUMMARY
+==================================================
+
+Generated: 2025-12-08 21:47:28
+Database: C:\Users\eyabe\PycharmProjects\Free_Project\data\db.sqlite
+
+Comments processed: 38302
+Graph nodes: 59
+Graph edges: 1671
+
+Top 20 entities:
+  Conseil: 7645
+  Bon: 5324
+  Merci: 5015
+  Conseiller: 4907
+  Problème: 4285
+  Free: 3891
+  Très: 3290
+  Service: 2946
+  Appel: 2532
+  Réponse: 2349
+  Téléphone: 2297
+  Satisfait: 2241
+  Technicien: 2079
+  Box: 1967
+  Client: 1958
+  Rapide: 1929
+  Solution: 1416
+  Bonjour: 1322
+  Internet: 1289
+  Temps: 1288

@@ -1,0 +1,99 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Knowledge Graph</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 40px;
+                    background-color: #f5f5f5;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                    border-bottom: 2px solid #4CAF50;
+                    padding-bottom: 10px;
+                }
+                .stats {
+                    background: #e8f5e9;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin: 20px 0;
+                }
+                .graph-container {
+                    margin: 30px 0;
+                    padding: 20px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    background: #fafafa;
+                }
+                .entities {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    margin-top: 20px;
+                }
+                .entity {
+                    background: #4CAF50;
+                    color: white;
+                    padding: 8px 15px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                }
+                .no-data {
+                    text-align: center;
+                    color: #666;
+                    font-size: 18px;
+                    padding: 50px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>📊 Knowledge Graph Visualization</h1>
+
+                <div class="stats">
+                    <h3>📈 Statistics</h3>
+                    <p><strong>Comments analyzed:</strong> 38302</p>
+                    <p><strong>Entities found:</strong> 3270</p>
+                    <p><strong>Graph nodes:</strong> 3270</p>
+                    <p><strong>Graph edges:</strong> 47385</p>
+                </div>
+
+                <div class="graph-container">
+                    <h3>🖼️ Graph Visualization</h3>
+        <img src="knowledge_graph.png" alt="Knowledge Graph">
+                    <h3>🔍 Top Entities</h3>
+                    <div class="entities">
+            <div class="entity">Bon (5324)</div><div class="entity">Merci (5015)</div><div class="entity">Conseiller (4907)</div><div class="entity">Je (4609)</div><div class="entity">Problème (4285)</div><div class="entity">Free (3891)</div><div class="entity">Très (3290)</div><div class="entity">Service (2946)</div><div class="entity">Appel (2532)</div><div class="entity">Téléphone (2297)</div><div class="entity">Satisfait (2241)</div><div class="entity">Le (2145)</div><div class="entity">Technicien (2079)</div><div class="entity">Client (1958)</div><div class="entity">Rapide (1929)</div><div class="entity">La (1700)</div><div class="entity">Solution (1416)</div><div class="entity">Bonjour (1322)</div><div class="entity">Internet (1289)</div><div class="entity">Il (1258)</div>
+                    </div>
+
+                    <h3>🔗 Strongest Connections</h3>
+                    <ul>
+            <li><strong>Bon</strong> ↔ <strong>Bonjour</strong> (co-occurs 1322 times)</li><li><strong>Je</strong> ↔ <strong>Free</strong> (co-occurs 1193 times)</li><li><strong>Bon</strong> ↔ <strong>Je</strong> (co-occurs 1103 times)</li><li><strong>Bon</strong> ↔ <strong>Free</strong> (co-occurs 1009 times)</li><li><strong>Bon</strong> ↔ <strong>Très</strong> (co-occurs 897 times)</li><li><strong>Conseiller</strong> ↔ <strong>Le</strong> (co-occurs 893 times)</li><li><strong>Bon</strong> ↔ <strong>Conseiller</strong> (co-occurs 861 times)</li><li><strong>Je</strong> ↔ <strong>Problème</strong> (co-occurs 836 times)</li><li><strong>Service</strong> ↔ <strong>Je</strong> (co-occurs 822 times)</li><li><strong>Free</strong> ↔ <strong>Problème</strong> (co-occurs 786 times)</li>
+                    </ul>
+            
+                </div>
+
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666;">
+                    <p><small>Generated on: 2025-12-08 21:42:19</small></p>
+                    <p><small>Database: C:\Users\eyabe\PycharmProjects\Free_Project\data\db.sqlite</small></p>
+                </div>
+            </div>
+        </body>
+        </html>
+        

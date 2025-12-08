@@ -1,0 +1,19 @@
+{
+  "method": "dowhy_linear_regression_backdoor",
+  "estimates": {
+    "improved_wifi": {
+      "ate": -0.43009369672623154,
+      "ate_stderr": null,
+      "p_value": null,
+      "ci_lower": null,
+      "ci_upper": null
+    }
+  },
+  "what_if": {
+    "scenario": "improve_all_wifi",
+    "customers_affected": 8601,
+    "business_impact": {
+      "value_saved_euros": 430050
+    }
+  }
+}

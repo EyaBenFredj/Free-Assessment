@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Graph Results</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2::before {
+            content: '📊';
+            font-size: 1.5em;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .graph-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .graph-image {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 5px solid white;
+        }
+
+        .entity-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .entity-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .entity-tag:hover {
+            background: #764ba2;
+            transform: scale(1.05);
+        }
+
+        .connections {
+            margin-top: 20px;
+        }
+
+        .connection {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .connection strong {
+            color: #667eea;
+        }
+
+        .success-badge {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+
+        .timestamp {
+            font-size: 0.9em;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📈 Knowledge Graph Analysis</h1>
+            <p class="subtitle">Visualization of entity relationships from customer feedback</p>
+        </header>
+
+        <div class="content">
+            <div class="success-badge">
+                <span>✅</span>
+                <span>Analysis Complete</span>
+            </div>
+
+            <div class="section">
+                <h2>Project Overview</h2>
+                <p>This knowledge graph was generated from customer comments to identify key topics and their relationships. The graph shows which entities frequently appear together in the same comments.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Database</div>
+                        <div class="stat-value">SQLite</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Project Path</div>
+                        <div class="stat-value">Free_Project</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Analysis Type</div>
+                        <div class="stat-value">Co-occurrence</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Visualization</div>
+                        <div class="stat-value">Network Graph</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Graph Visualization</h2>
+                <div class="graph-container">
+                    <p>Below is the generated knowledge graph showing relationships between entities:</p>
+
+                    <!-- Check if PNG exists and display it -->
+                    <div id="graph-image-container">
+                        <p><em>Loading graph visualization...</em></p>
+                    </div>
+
+                    <script>
+                        // Try to load the PNG image
+                        function loadGraphImage() {
+                            var img = document.createElement('img');
+                            img.className = 'graph-image';
+                            img.alt = 'Knowledge Graph Visualization';
+
+                            img.onload = function() {
+                                document.getElementById('graph-image-container').innerHTML = '';
+                                document.getElementById('graph-image-container').appendChild(img);
+
+                                // Add caption
+                                var caption = document.createElement('p');
+                                caption.style.marginTop = '10px';
+                                caption.style.color = '#666';
+                                caption.innerHTML = '<em>Figure: Knowledge graph showing entity co-occurrences</em>';
+                                document.getElementById('graph-image-container').appendChild(caption);
+                            };
+
+                            img.onerror = function() {
+                                document.getElementById('graph-image-container').innerHTML = 
+                                    '<div style="background: #ffebee; padding: 30px; border-radius: 10px; border: 2px dashed #f44336;">' +
+                                    '<h3 style="color: #f44336;">⚠️ Graph Image Not Found</h3>' +
+                                    '<p>The graph image file (knowledge_graph.png) was not found in the results directory.</p>' +
+                                    '<p>This could mean:</p>' +
+                                    '<ul style="text-align: left; margin: 10px 0;">' +
+                                    '<li>The graph generation failed</li>' +
+                                    '<li>The PNG file was not saved</li>' +
+                                    '<li>The graph was empty (no entities found)</li>' +
+                                    '</ul>' +
+                                    '<p>Check the console output for more details.</p>' +
+                                    '</div>';
+                            };
+
+                            img.src = 'knowledge_graph.png';
+                        }
+
+                        // Load image when page loads
+                        window.onload = loadGraphImage;
+                    </script>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Common Entities Found</h2>
+                <p>These are the most frequently mentioned topics in customer comments:</p>
+
+                <div class="entity-tags">
+                    <span class="entity-tag">Service</span>
+                    <span class="entity-tag">Client</span>
+                    <span class="entity-tag">Support</span>
+                    <span class="entity-tag">Fibre</span>
+                    <span class="entity-tag">Internet</span>
+                    <span class="entity-tag">Prix</span>
+                    <span class="entity-tag">Qualité</span>
+                    <span class="entity-tag">Installation</span>
+                    <span class="entity-tag">Débit</span>
+                    <span class="entity-tag">Panne</span>
+                    <span class="entity-tag">Réseau</span>
+                    <span class="entity-tag">Conseiller</span>
+                    <span class="entity-tag">Technique</span>
+                    <span class="entity-tag">Satisfait</span>
+                    <span class="entity-tag">Mécontent</span>
+                </div>
+
+                <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
+                    <em>Note: These are example entities. The actual entities found depend on your data.</em>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>What This Graph Shows</h2>
+                <p>A knowledge graph helps you understand:</p>
+                <ul style="margin: 15px 0 15px 20px;">
+                    <li><strong>Key topics</strong> in customer feedback</li>
+                    <li><strong>Relationships</strong> between different issues</li>
+                    <li><strong>Common complaint patterns</strong> (what issues occur together)</li>
+                    <li><strong>Central themes</strong> that connect multiple topics</li>
+                </ul>
+
+                <div class="connections">
+                    <div class="connection">
+                        <strong>Example Insight:</strong> If "Panne" (outage) frequently appears with "Fibre" and "Débit" (speed), this suggests fiber internet speed issues during outages.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Knowledge Graph Analysis Tool</p>
+            <p class="timestamp">Generated on: 2025-12-08 19:04:09</p>
+            <p class="timestamp">Project: Free_Project | Database: data/db.sqlite</p>
+        </footer>
+    </div>
+</body>
+</html>

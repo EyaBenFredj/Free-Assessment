@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-12-07T09:24:00.245106",
+  "optimal_ranking": [
+    {
+      "intervention": "billing_simplification",
+      "success_rate": 0.8984583761562179,
+      "expected_roi": 0.011979445015416241,
+      "total_value": 359.3833504624872
+    },
+    {
+      "intervention": "advisor_training",
+      "success_rate": 0.7959183673469388,
+      "expected_roi": 0.009551020408163264,
+      "total_value": 477.5510204081632
+    },
+    {
+      "intervention": "fiber_maintenance",
+      "success_rate": 0.4,
+      "expected_roi": 0.006,
+      "total_value": 480.0
+    }
+  ],
+  "ab_test_result": {
+    "intervention_a": "billing_simplification",
+    "intervention_b": "advisor_training",
+    "probability_a_beats_b": 0.8879,
+    "expected_difference": 0.018070758104543727,
+    "recommendation": "billing_simplification",
+    "confidence": 0.7758
+  },
+  "pareto_optimal_solutions": [
+    {
+      "selected": [
+        "fiber_maintenance"
+      ],
+      "cost": 

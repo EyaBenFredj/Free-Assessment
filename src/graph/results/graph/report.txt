@@ -1,0 +1,24 @@
+KNOWLEDGE GRAPH REPORT
+==================================================
+
+Date: 2025-12-08 21:42:19
+Database: C:\Users\eyabe\PycharmProjects\Free_Project\data\db.sqlite
+Table: csat_extract
+Text column: commentaire
+
+Comments processed: 38302
+Unique entities: 3270
+Graph nodes: 3270
+Graph edges: 47385
+
+Top entities:
+  Bon: 5324
+  Merci: 5015
+  Conseiller: 4907
+  Je: 4609
+  Problème: 4285
+  Free: 3891
+  Très: 3290
+  Service: 2946
+  Appel: 2532
+  Téléphone: 2297
